@@ -1,13 +1,13 @@
-//  HomeView.swift
-//  ARL Navigation
-//
-//  Created by Danil Lugli on 27/09/24.
-//
-
 import SwiftUI
+import MARS
+import RoomPlan
+import SceneKit
+import ARKit
 
 struct HomeView: View {
-    init() {
+    
+    public init() {
+        
         let appearance = UINavigationBarAppearance()
         appearance.configureWithOpaqueBackground()
         appearance.backgroundColor = UIColor(Color.customBackground)
@@ -20,8 +20,27 @@ struct HomeView: View {
 
     var body: some View {
         NavigationView {
-            VStack {
+            VStack(alignment: .leading) {
+
+                Text("ARL Navigation is an app designed to demonstrate how to use the MARS library.\n\nMARS is a library that provides to end-user their position within environments that have been scanned, processed, and created through ARL Creator.")
+                    .padding()
                 
+                Divider()
+                
+                VStack {
+                    Button(action: {
+                        //
+                    }) {
+                        Text("START NAVIGATION")
+                            .frame(width: 200, height: 60)
+                            .foregroundStyle(.white)
+                            .background(Color.blue.opacity(0.4))
+                            .cornerRadius(20)
+                            .bold()
+                    }
+                }
+                .frame(maxWidth: .infinity, alignment: .center) // Posiziona al centro
+
             }
             .foregroundColor(.white)
             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)

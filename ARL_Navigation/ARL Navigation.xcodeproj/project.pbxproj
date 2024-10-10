@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		AA476B2B2CB5A8FF00385D85 /* MARS in Frameworks */ = {isa = PBXBuildFile; productRef = AA476B2A2CB5A8FF00385D85 /* MARS */; };
+		AA476B2E2CB5AC2C00385D85 /* MARS in Frameworks */ = {isa = PBXBuildFile; productRef = AA476B2D2CB5AC2C00385D85 /* MARS */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		AAC685292CA6E8C700AEEC4B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +57,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA476B2B2CB5A8FF00385D85 /* MARS in Frameworks */,
+				AA476B2E2CB5AC2C00385D85 /* MARS in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +119,8 @@
 			);
 			name = "ARL Navigation";
 			packageProductDependencies = (
+				AA476B2A2CB5A8FF00385D85 /* MARS */,
+				AA476B2D2CB5AC2C00385D85 /* MARS */,
 			);
 			productName = "ARL Navigation";
 			productReference = AAC685162CA6E8C500AEEC4B /* ARL Navigation.app */;
@@ -195,6 +204,9 @@
 			);
 			mainGroup = AAC6850D2CA6E8C500AEEC4B;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				AA476B2C2CB5AB6500385D85 /* XCLocalSwiftPackageReference "../../MARS Library/MARS" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = AAC685172CA6E8C500AEEC4B /* Products */;
 			projectDirPath = "";
@@ -321,6 +333,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportsDocumentBrowser = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -378,6 +393,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportsDocumentBrowser = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -399,6 +417,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
@@ -429,6 +448,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
@@ -560,6 +580,24 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		AA476B2C2CB5AB6500385D85 /* XCLocalSwiftPackageReference "../../MARS Library/MARS" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = "../../MARS Library/MARS";
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AA476B2A2CB5A8FF00385D85 /* MARS */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MARS;
+		};
+		AA476B2D2CB5AC2C00385D85 /* MARS */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MARS;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AAC6850E2CA6E8C500AEEC4B /* Project object */;
 }
