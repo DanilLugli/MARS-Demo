@@ -46,9 +46,3 @@ struct CardView_Previews: PreviewProvider {
         CardView(name: "Building", rowSize: 1, isSelected: false)
     }
 }
-
-private let dateFormatter: DateFormatter = {
-    let formatter = DateFormatter()
-    formatter.dateStyle = .medium
-    return formatter
-}()
