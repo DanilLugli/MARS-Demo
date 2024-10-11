@@ -8,18 +8,32 @@ struct HomeView: View {
     @State private var navigateToLocationView: Bool = false
     @State private var locationProvider: LocationProvider?
     var arView = ARSCNView()
-    var url = URL(fileURLWithPath: "path/to/directory") 
-    
+    @State private var navigationPath = NavigationPath()
+
     var body: some View {
-        NavigationView {
+        NavigationStack(path: $navigationPath) {
             VStack {
                 Button(action: {
                     Task {
+                        let fileManager = FileManager.default
+                        let documentsDirectory = fileManager.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent("ARLNavigation")
                         
-                        let provider = await LocationProvider(arView: arView, url: url)
+                        if !fileManager.fileExists(atPath: documentsDirectory.path) {
+                            do {
+                                try fileManager.createDirectory(at: documentsDirectory, withIntermediateDirectories: true, attributes: nil)
+                                print("Root folder created: \(documentsDirectory.path)")
+                            } catch {
+                                throw NSError(domain: "com.example.ScanBuild", code: 1, userInfo: [NSLocalizedDescriptionKey: "Error creating root folder: \(error)"])
+                            }
+                        }
+
+                        let casaDirectoryURL = documentsDirectory
+                        let provider = await LocationProvider(arView: arView, url: casaDirectoryURL)
                         locationProvider = provider
                         navigateToLocationView = true
-                        
+
+                        // Use navigation path to push LocationView onto the stack
+                        navigationPath.append(locationProvider!)
                     }
                 }) {
                     Text("START NAVIGATION")
@@ -31,15 +45,13 @@ struct HomeView: View {
                 }
             }
             .frame(maxWidth: .infinity, alignment: .center)
-            .foregroundColor(.white)
             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
             .background(Color.customBackground)
             .edgesIgnoringSafeArea(.all)
             .navigationTitle("ARL Navigation")
-            .navigationDestination(isPresented: $navigateToLocationView) {
-                if let locationProvider = locationProvider {
-                    LocationView(locationProvider: locationProvider)
-                }
+            .foregroundColor(.white)
+            .navigationDestination(for: LocationProvider.self) { locationProvider in
+                LocationView(locationProvider: locationProvider)
             }
         }
     }
