@@ -6,8 +6,13 @@
 //
 
 import SwiftUI
+import MARS
+import ARKit
 
 struct LocationView: View {
+    
+    var locationProvider: LocationProvider
+    
     var body: some View {
         VStack {
             Text("Welcome to LocationView")
@@ -23,6 +28,3 @@ struct LocationView: View {
        
 }
 
-#Preview {
-    LocationView()
-}
