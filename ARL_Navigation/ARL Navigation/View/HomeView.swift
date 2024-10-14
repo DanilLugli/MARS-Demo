@@ -7,12 +7,29 @@ import ARKit
 struct HomeView: View {
     @State private var navigateToLocationView: Bool = false
     @State private var locationProvider: LocationProvider?
-    var arView = ARSCNView()
+    @State var arView = ARSCNView()
     @State private var navigationPath = NavigationPath()
 
     var body: some View {
         NavigationStack(path: $navigationPath) {
             VStack {
+                VStack{
+
+//                    VStack{
+//                        Text("Building:").font(.largeTitle)
+//                        Text(locationProvider?.building?.name ?? "")
+//                        //Text(locationProvider.building?.floors.count ?? 99)
+//                        //Text(locationProvider.building?.floors[0].rooms.count)
+//                        Text("Floors:").font(.title2)
+//                        Text(locationProvider!.building?.floors[0].name ?? "")
+//                        Text("Rooms:").font(.title2)
+//                        Text(locationProvider!.building?.floors[0].rooms[0].name ?? "")
+//                        Text(locationProvider!.building?.floors[0].rooms[1].name ?? "")
+//                        Text("Scene:").font(.title2)
+//                        Text(locationProvider!.building?.floors[0].scene.description ?? "Error for floor scene")
+//                        Text(locationProvider!.building?.floors[0].rooms[1].scene.description ?? "Error for floor scene")
+//                    }
+                }
                 Button(action: {
                     Task {
                         let fileManager = FileManager.default
