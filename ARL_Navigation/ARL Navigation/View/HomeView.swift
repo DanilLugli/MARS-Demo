@@ -33,12 +33,18 @@ struct HomeView: View {
                         let casaDirectoryURL = documentsDirectory
                         let arSCNView = ARSCNView(frame: .zero) // Inizializza ARSCNView
                         locationProvider = await PositionProvider(url: casaDirectoryURL, arSCNView: arView)
-                        
                     }
                 }) {
-                    Text("Upload & Start Navigation")
+                    Text("Upload Map & Start Navigation")
+                        .font(.headline)
+                
+                        .foregroundColor(.blue) // Colore del testo
+                        .frame(width: 280, height: 80) // Dimensioni del pulsante
+                        .background(Color.blue.opacity(0.4)) // Sfondo blu con opacità
+                        .cornerRadius(20) // Bordi arrotondati
                 }
             }
         }
     }
 }
+
