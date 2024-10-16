@@ -19,13 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Crea la finestra principale
         window = UIWindow(frame: UIScreen.main.bounds)
         
-        // Crea l'istanza di HomeView
         let homeView = HomeView()
         
-        // Usa un UIHostingController per integrare la SwiftUI view
         window?.rootViewController = UIHostingController(rootView: homeView)
         
-        // Rendi visibile la finestra
         window?.makeKeyAndVisible()
         
         return true

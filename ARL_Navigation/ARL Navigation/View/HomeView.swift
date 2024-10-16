@@ -5,31 +5,16 @@ import SceneKit
 import ARKit
 
 struct HomeView: View {
-    @State private var navigateToLocationView: Bool = false
-    @State private var locationProvider: LocationProvider?
-    @State var arView = ARSCNView()
-    @State private var navigationPath = NavigationPath()
-
+    
+    @State private var locationProvider: PositionProvider? = nil
+    @State private var arView = ARSCNView()
+    
     var body: some View {
-        NavigationStack(path: $navigationPath) {
-            VStack {
-                VStack{
-
-//                    VStack{
-//                        Text("Building:").font(.largeTitle)
-//                        Text(locationProvider?.building?.name ?? "")
-//                        //Text(locationProvider.building?.floors.count ?? 99)
-//                        //Text(locationProvider.building?.floors[0].rooms.count)
-//                        Text("Floors:").font(.title2)
-//                        Text(locationProvider!.building?.floors[0].name ?? "")
-//                        Text("Rooms:").font(.title2)
-//                        Text(locationProvider!.building?.floors[0].rooms[0].name ?? "")
-//                        Text(locationProvider!.building?.floors[0].rooms[1].name ?? "")
-//                        Text("Scene:").font(.title2)
-//                        Text(locationProvider!.building?.floors[0].scene.description ?? "Error for floor scene")
-//                        Text(locationProvider!.building?.floors[0].rooms[1].scene.description ?? "Error for floor scene")
-//                    }
-                }
+        VStack {
+            if let provider = locationProvider {
+                provider.showMap()
+                Text((locationProvider?.building.name)!)
+            } else {
                 Button(action: {
                     Task {
                         let fileManager = FileManager.default
@@ -38,42 +23,22 @@ struct HomeView: View {
                         if !fileManager.fileExists(atPath: documentsDirectory.path) {
                             do {
                                 try fileManager.createDirectory(at: documentsDirectory, withIntermediateDirectories: true, attributes: nil)
-                                print("Root folder created: \(documentsDirectory.path)")
+                                print("Directory creata correttamente")
                             } catch {
-                                throw NSError(domain: "com.example.ScanBuild", code: 1, userInfo: [NSLocalizedDescriptionKey: "Error creating root folder: \(error)"])
+                                // Gestisci l'errore
+                                print("Errore durante la creazione della directory: \(error)")
                             }
                         }
-
+                        
                         let casaDirectoryURL = documentsDirectory
-                        let provider = await LocationProvider(arView: arView, url: casaDirectoryURL)
-                        locationProvider = provider
-                        navigateToLocationView = true
-
-                        // Use navigation path to push LocationView onto the stack
-                        navigationPath.append(locationProvider!)
+                        let arSCNView = ARSCNView(frame: .zero) // Inizializza ARSCNView
+                        locationProvider = await PositionProvider(url: casaDirectoryURL, arSCNView: arView)
+                        
                     }
                 }) {
-                    Text("START NAVIGATION")
-                        .frame(width: 200, height: 60)
-                        .foregroundStyle(.white)
-                        .background(Color.blue.opacity(0.4))
-                        .cornerRadius(20)
-                        .bold()
+                    Text("Upload & Start Navigation")
                 }
-            }
-            .frame(maxWidth: .infinity, alignment: .center)
-            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
-            .background(Color.customBackground)
-            .edgesIgnoringSafeArea(.all)
-            .navigationTitle("ARL Navigation")
-            .foregroundColor(.white)
-            .navigationDestination(for: LocationProvider.self) { locationProvider in
-                LocationView(locationProvider: locationProvider)
             }
         }
     }
-}
-
-#Preview {
-    HomeView()
 }
