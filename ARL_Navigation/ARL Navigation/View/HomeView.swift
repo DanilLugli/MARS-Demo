@@ -10,29 +10,30 @@ struct HomeView: View {
     @State private var arView = ARSCNView()
     
     var body: some View {
-        NavigationView { // Aggiungi NavigationView per la toolbar
+        NavigationView {
             VStack {
                 if let provider = locationProvider {
+                    
                     provider.showMap()
                         .ignoresSafeArea()
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    
                 } else {
                     VStack {
-                        // Testo descrittivo sopra il bottone
-                        Text("ARL Navigation is an app that demonstrates the functionality of the MARS library. Press the button below to Start end to be mapped and localized in the EveryWare Lab map.")
+
+                        Text("ARL Navigation is an app that demonstrates the functionality of the MARS library. \nPress the button below to Start end to be mapped and localized in the EveryWare Lab map.")
                             .font(.body)
-                            .multilineTextAlignment(.center)
-                            .padding(.horizontal, 20)
-                            .padding(.bottom, 20)
-                        
+
+
+                        Spacer()
                         Button(action: {
                             Task {
                                 let fileManager = FileManager.default
-                                let documentsDirectory = fileManager.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent("ARLNavigation")
+                                let dataFromURL = fileManager.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent("ARLNavigation")
                                 
-                                if !fileManager.fileExists(atPath: documentsDirectory.path) {
+                                if !fileManager.fileExists(atPath: dataFromURL.path) {
                                     do {
-                                        try fileManager.createDirectory(at: documentsDirectory, withIntermediateDirectories: true, attributes: nil)
+                                        try fileManager.createDirectory(at: dataFromURL, withIntermediateDirectories: true, attributes: nil)
                                         print("Directory created successfully")
                                     } catch {
                                         // Handle error
@@ -40,17 +41,19 @@ struct HomeView: View {
                                     }
                                 }
                                 
-                                let casaDirectoryURL = documentsDirectory
-                                let arSCNView = ARSCNView(frame: .zero) // Initialize ARSCNView
-                                locationProvider = await PositionProvider(url: casaDirectoryURL, arSCNView: arView)
+                                let data = dataFromURL
+                                
+                                locationProvider = await PositionProvider(data: data, arSCNView: arView)
                             }
                         }) {
-                            Text("Upload Map & Start Navigation")
+                            Text("Start Navigation")
+                                .font(.system(size: 24))
+                                .bold()
                                 .font(.headline)
-                                .foregroundColor(.blue) // Text color
-                                .frame(width: 280, height: 80) // Button size
-                                .background(Color.blue.opacity(0.4)) // Background with opacity
-                                .cornerRadius(20) // Rounded corners
+                                .foregroundColor(.blue)
+                                .frame(width: 280, height: 80)
+                                .background(Color.blue.opacity(0.2))
+                                .cornerRadius(20)
                         }
                     }
                     .padding()
@@ -58,5 +61,11 @@ struct HomeView: View {
                 }
             }
         }
+    }
+}
+
+struct HomeView_Previews: PreviewProvider {
+    static var previews: some View {
+        HomeView()
     }
 }
