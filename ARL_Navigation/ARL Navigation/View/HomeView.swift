@@ -14,19 +14,30 @@ struct HomeView: View {
             VStack {
                 if let provider = locationProvider {
                     
-                    provider.showMap()
-                        .ignoresSafeArea()
-                        .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    
-                } else {
+                        provider.showMap()
+                            .ignoresSafeArea()
+                            .frame(maxWidth: .infinity, maxHeight: .infinity)
+                   
+                }
+                
+                else {
                     VStack {
-
-                        Text("ARL Navigation is an app that demonstrates the functionality of the MARS library. \nPress the button below to Start end to be mapped and localized in the EveryWare Lab map.")
+                        
+                        Image(systemName: "iphone.gen2.badge.location")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .foregroundStyle(Color.blue.opacity(0.6), Color.blue)
+                            .frame(width: 100, height: 100)
+                        
+                        
+                        Text("ARL Navigation is an app that demonstrates MARS library's functionality in debug mode. \nPress the button below to Start end being mapped and localized in the EveryWare Lab environment.\nAll the data used in this app in order to be located with MARS are created with ARL Creator.")
                             .font(.body)
-
-
+                            .padding(.top)
+                        
                         Spacer()
+
                         Button(action: {
+                            
                             Task {
                                 let fileManager = FileManager.default
                                 let dataFromURL = fileManager.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent("ARLNavigation")
@@ -43,10 +54,11 @@ struct HomeView: View {
                                 
                                 let data = dataFromURL
                                 
-                                locationProvider = await PositionProvider(data: data, arSCNView: arView)
+                                locationProvider =  PositionProvider(data: data, arSCNView: arView)
                             }
+                            
                         }) {
-                            Text("Start Navigation")
+                            Text("Start Positioning")
                                 .font(.system(size: 24))
                                 .bold()
                                 .font(.headline)
