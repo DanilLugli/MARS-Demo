@@ -42,8 +42,8 @@
             filePath = "../../MARS Library/MARS/Sources/MARS/AR/SCNViewContainer.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "443"
-            endingLineNumber = "443"
+            startingLineNumber = "462"
+            endingLineNumber = "462"
             landmarkName = "updatePosition(_:_:floor:)"
             landmarkType = "7">
          </BreakpointContent>
