@@ -16,9 +16,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "AAC685152CA6E8C500AEEC4B"
-               BuildableName = "ARL Navigation.app"
-               BlueprintName = "ARL Navigation"
-               ReferencedContainer = "container:ARL Navigation.xcodeproj">
+               BuildableName = "MARS Demo.app"
+               BlueprintName = "MARS Demo"
+               ReferencedContainer = "container:MARS Demo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -36,9 +36,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "AAC685272CA6E8C700AEEC4B"
-               BuildableName = "ARL NavigationTests.xctest"
-               BlueprintName = "ARL NavigationTests"
-               ReferencedContainer = "container:ARL Navigation.xcodeproj">
+               BuildableName = "MARS DemoTests.xctest"
+               BlueprintName = "MARS DemoTests"
+               ReferencedContainer = "container:MARS Demo.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -47,9 +47,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "AAC685312CA6E8C700AEEC4B"
-               BuildableName = "ARL NavigationUITests.xctest"
-               BlueprintName = "ARL NavigationUITests"
-               ReferencedContainer = "container:ARL Navigation.xcodeproj">
+               BuildableName = "MARS DemoUITests.xctest"
+               BlueprintName = "MARS DemoUITests"
+               ReferencedContainer = "container:MARS Demo.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -69,9 +69,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AAC685152CA6E8C500AEEC4B"
-            BuildableName = "ARL Navigation.app"
-            BlueprintName = "ARL Navigation"
-            ReferencedContainer = "container:ARL Navigation.xcodeproj">
+            BuildableName = "MARS Demo.app"
+            BlueprintName = "MARS Demo"
+            ReferencedContainer = "container:MARS Demo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -86,9 +86,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AAC685152CA6E8C500AEEC4B"
-            BuildableName = "ARL Navigation.app"
-            BlueprintName = "ARL Navigation"
-            ReferencedContainer = "container:ARL Navigation.xcodeproj">
+            BuildableName = "MARS Demo.app"
+            BlueprintName = "MARS Demo"
+            ReferencedContainer = "container:MARS Demo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -30,15 +30,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		AAC685162CA6E8C500AEEC4B /* ARL Navigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ARL Navigation.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AAC685282CA6E8C700AEEC4B /* ARL NavigationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ARL NavigationTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AAC685322CA6E8C700AEEC4B /* ARL NavigationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ARL NavigationUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAC685162CA6E8C500AEEC4B /* MARS Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MARS Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAC685282CA6E8C700AEEC4B /* MARS DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MARS DemoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAC685322CA6E8C700AEEC4B /* MARS DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MARS DemoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		AAC685182CA6E8C500AEEC4B /* ARL Navigation */ = {
+		AAC685182CA6E8C500AEEC4B /* MARS Demo */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "ARL Navigation";
+			path = "MARS Demo";
 			sourceTree = "<group>";
 		};
 		AAC6852B2CA6E8C700AEEC4B /* ARL NavigationTests */ = {
@@ -84,7 +84,7 @@
 		AAC6850D2CA6E8C500AEEC4B = {
 			isa = PBXGroup;
 			children = (
-				AAC685182CA6E8C500AEEC4B /* ARL Navigation */,
+				AAC685182CA6E8C500AEEC4B /* MARS Demo */,
 				AAC6852B2CA6E8C700AEEC4B /* ARL NavigationTests */,
 				AAC685352CA6E8C700AEEC4B /* ARL NavigationUITests */,
 				AAC685172CA6E8C500AEEC4B /* Products */,
@@ -94,9 +94,9 @@
 		AAC685172CA6E8C500AEEC4B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AAC685162CA6E8C500AEEC4B /* ARL Navigation.app */,
-				AAC685282CA6E8C700AEEC4B /* ARL NavigationTests.xctest */,
-				AAC685322CA6E8C700AEEC4B /* ARL NavigationUITests.xctest */,
+				AAC685162CA6E8C500AEEC4B /* MARS Demo.app */,
+				AAC685282CA6E8C700AEEC4B /* MARS DemoTests.xctest */,
+				AAC685322CA6E8C700AEEC4B /* MARS DemoUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -104,9 +104,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AAC685152CA6E8C500AEEC4B /* ARL Navigation */ = {
+		AAC685152CA6E8C500AEEC4B /* MARS Demo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AAC6853C2CA6E8C700AEEC4B /* Build configuration list for PBXNativeTarget "ARL Navigation" */;
+			buildConfigurationList = AAC6853C2CA6E8C700AEEC4B /* Build configuration list for PBXNativeTarget "MARS Demo" */;
 			buildPhases = (
 				AAC685122CA6E8C500AEEC4B /* Sources */,
 				AAC685132CA6E8C500AEEC4B /* Frameworks */,
@@ -117,21 +117,21 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				AAC685182CA6E8C500AEEC4B /* ARL Navigation */,
+				AAC685182CA6E8C500AEEC4B /* MARS Demo */,
 			);
-			name = "ARL Navigation";
+			name = "MARS Demo";
 			packageProductDependencies = (
 				AA476B2A2CB5A8FF00385D85 /* MARS */,
 				AA476B2D2CB5AC2C00385D85 /* MARS */,
 				AA93DCD92CDD0C9100EAEC27 /* DeviceKit */,
 			);
 			productName = "ARL Navigation";
-			productReference = AAC685162CA6E8C500AEEC4B /* ARL Navigation.app */;
+			productReference = AAC685162CA6E8C500AEEC4B /* MARS Demo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		AAC685272CA6E8C700AEEC4B /* ARL NavigationTests */ = {
+		AAC685272CA6E8C700AEEC4B /* MARS DemoTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AAC6853F2CA6E8C700AEEC4B /* Build configuration list for PBXNativeTarget "ARL NavigationTests" */;
+			buildConfigurationList = AAC6853F2CA6E8C700AEEC4B /* Build configuration list for PBXNativeTarget "MARS DemoTests" */;
 			buildPhases = (
 				AAC685242CA6E8C700AEEC4B /* Sources */,
 				AAC685252CA6E8C700AEEC4B /* Frameworks */,
@@ -145,16 +145,16 @@
 			fileSystemSynchronizedGroups = (
 				AAC6852B2CA6E8C700AEEC4B /* ARL NavigationTests */,
 			);
-			name = "ARL NavigationTests";
+			name = "MARS DemoTests";
 			packageProductDependencies = (
 			);
 			productName = "ARL NavigationTests";
-			productReference = AAC685282CA6E8C700AEEC4B /* ARL NavigationTests.xctest */;
+			productReference = AAC685282CA6E8C700AEEC4B /* MARS DemoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		AAC685312CA6E8C700AEEC4B /* ARL NavigationUITests */ = {
+		AAC685312CA6E8C700AEEC4B /* MARS DemoUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AAC685422CA6E8C700AEEC4B /* Build configuration list for PBXNativeTarget "ARL NavigationUITests" */;
+			buildConfigurationList = AAC685422CA6E8C700AEEC4B /* Build configuration list for PBXNativeTarget "MARS DemoUITests" */;
 			buildPhases = (
 				AAC6852E2CA6E8C700AEEC4B /* Sources */,
 				AAC6852F2CA6E8C700AEEC4B /* Frameworks */,
@@ -168,11 +168,11 @@
 			fileSystemSynchronizedGroups = (
 				AAC685352CA6E8C700AEEC4B /* ARL NavigationUITests */,
 			);
-			name = "ARL NavigationUITests";
+			name = "MARS DemoUITests";
 			packageProductDependencies = (
 			);
 			productName = "ARL NavigationUITests";
-			productReference = AAC685322CA6E8C700AEEC4B /* ARL NavigationUITests.xctest */;
+			productReference = AAC685322CA6E8C700AEEC4B /* MARS DemoUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -198,7 +198,7 @@
 					};
 				};
 			};
-			buildConfigurationList = AAC685112CA6E8C500AEEC4B /* Build configuration list for PBXProject "ARL Navigation" */;
+			buildConfigurationList = AAC685112CA6E8C500AEEC4B /* Build configuration list for PBXProject "MARS Demo" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -208,17 +208,17 @@
 			mainGroup = AAC6850D2CA6E8C500AEEC4B;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				AA476B2C2CB5AB6500385D85 /* XCLocalSwiftPackageReference "../../MARS Library/MARS" */,
 				AA93DCD82CDD0C5D00EAEC27 /* XCLocalSwiftPackageReference "../../../../../Documents/DeviceKit" */,
+				AA8018B42D708A1900FEF60A /* XCLocalSwiftPackageReference "../../MARS/MARS" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = AAC685172CA6E8C500AEEC4B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AAC685152CA6E8C500AEEC4B /* ARL Navigation */,
-				AAC685272CA6E8C700AEEC4B /* ARL NavigationTests */,
-				AAC685312CA6E8C700AEEC4B /* ARL NavigationUITests */,
+				AAC685152CA6E8C500AEEC4B /* MARS Demo */,
+				AAC685272CA6E8C700AEEC4B /* MARS DemoTests */,
+				AAC685312CA6E8C700AEEC4B /* MARS DemoUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -274,12 +274,12 @@
 /* Begin PBXTargetDependency section */
 		AAC6852A2CA6E8C700AEEC4B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = AAC685152CA6E8C500AEEC4B /* ARL Navigation */;
+			target = AAC685152CA6E8C500AEEC4B /* MARS Demo */;
 			targetProxy = AAC685292CA6E8C700AEEC4B /* PBXContainerItemProxy */;
 		};
 		AAC685342CA6E8C700AEEC4B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = AAC685152CA6E8C500AEEC4B /* ARL Navigation */;
+			target = AAC685152CA6E8C500AEEC4B /* MARS Demo */;
 			targetProxy = AAC685332CA6E8C700AEEC4B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -487,7 +487,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ARL Navigation.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ARL Navigation";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MARS Demo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MARS Demo";
 			};
 			name = Debug;
 		};
@@ -506,7 +506,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ARL Navigation.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ARL Navigation";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MARS Demo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MARS Demo";
 			};
 			name = Release;
 		};
@@ -547,7 +547,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AAC685112CA6E8C500AEEC4B /* Build configuration list for PBXProject "ARL Navigation" */ = {
+		AAC685112CA6E8C500AEEC4B /* Build configuration list for PBXProject "MARS Demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AAC6853A2CA6E8C700AEEC4B /* Debug */,
@@ -556,7 +556,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AAC6853C2CA6E8C700AEEC4B /* Build configuration list for PBXNativeTarget "ARL Navigation" */ = {
+		AAC6853C2CA6E8C700AEEC4B /* Build configuration list for PBXNativeTarget "MARS Demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AAC6853D2CA6E8C700AEEC4B /* Debug */,
@@ -565,7 +565,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AAC6853F2CA6E8C700AEEC4B /* Build configuration list for PBXNativeTarget "ARL NavigationTests" */ = {
+		AAC6853F2CA6E8C700AEEC4B /* Build configuration list for PBXNativeTarget "MARS DemoTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AAC685402CA6E8C700AEEC4B /* Debug */,
@@ -574,7 +574,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AAC685422CA6E8C700AEEC4B /* Build configuration list for PBXNativeTarget "ARL NavigationUITests" */ = {
+		AAC685422CA6E8C700AEEC4B /* Build configuration list for PBXNativeTarget "MARS DemoUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AAC685432CA6E8C700AEEC4B /* Debug */,
@@ -586,9 +586,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		AA476B2C2CB5AB6500385D85 /* XCLocalSwiftPackageReference "../../MARS Library/MARS" */ = {
+		AA8018B42D708A1900FEF60A /* XCLocalSwiftPackageReference "../../MARS/MARS" */ = {
 			isa = XCLocalSwiftPackageReference;
-			relativePath = "../../MARS Library/MARS";
+			relativePath = ../../MARS/MARS;
 		};
 		AA93DCD82CDD0C5D00EAEC27 /* XCLocalSwiftPackageReference "../../../../../Documents/DeviceKit" */ = {
 			isa = XCLocalSwiftPackageReference;
