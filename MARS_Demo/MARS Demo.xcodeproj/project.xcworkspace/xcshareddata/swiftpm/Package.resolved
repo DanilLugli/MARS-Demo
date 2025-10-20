@@ -1,5 +1,5 @@
 {
-  "originHash" : "b3deaec805ca5416091a2f3041d03e607bacb303ca8d65fc399a3f97d14ea539",
+  "originHash" : "45fa8df1ec1b2633b37ea35879574a19f3141bacf01db8970bfc922add8fa861",
   "pins" : [
     {
       "identity" : "alerttoast",
@@ -11,12 +11,30 @@
       }
     },
     {
+      "identity" : "devicekit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/devicekit/DeviceKit.git",
+      "state" : {
+        "revision" : "581df61650bc457ec00373a592a84be3e7468eb1",
+        "version" : "5.7.0"
+      }
+    },
+    {
+      "identity" : "mars-lib",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/DanilLugli/MARS-Lib.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "5ba648efc13fa0936c48bc425f7531734ed8cf3b"
+      }
+    },
+    {
       "identity" : "swift-numerics",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-numerics.git",
       "state" : {
-        "revision" : "0a5bc04095a675662cf24757cc0640aa2204253b",
-        "version" : "1.0.2"
+        "revision" : "0c0290ff6b24942dadb83a929ffaaa1481df04a2",
+        "version" : "1.1.1"
       }
     }
   ],

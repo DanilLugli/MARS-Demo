@@ -10,6 +10,8 @@
 		AA476B2B2CB5A8FF00385D85 /* MARS in Frameworks */ = {isa = PBXBuildFile; productRef = AA476B2A2CB5A8FF00385D85 /* MARS */; };
 		AA476B2E2CB5AC2C00385D85 /* MARS in Frameworks */ = {isa = PBXBuildFile; productRef = AA476B2D2CB5AC2C00385D85 /* MARS */; };
 		AA93DCDA2CDD0C9100EAEC27 /* DeviceKit in Frameworks */ = {isa = PBXBuildFile; productRef = AA93DCD92CDD0C9100EAEC27 /* DeviceKit */; };
+		AAC0E2AC2EA62696002F113D /* DeviceKit in Frameworks */ = {isa = PBXBuildFile; productRef = AAC0E2AB2EA62696002F113D /* DeviceKit */; };
+		AAC0E2AF2EA62718002F113D /* MARS in Frameworks */ = {isa = PBXBuildFile; productRef = AAC0E2AE2EA62718002F113D /* MARS */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA476B2B2CB5A8FF00385D85 /* MARS in Frameworks */,
+				AAC0E2AF2EA62718002F113D /* MARS in Frameworks */,
+				AAC0E2AC2EA62696002F113D /* DeviceKit in Frameworks */,
 				AA476B2E2CB5AC2C00385D85 /* MARS in Frameworks */,
 				AA93DCDA2CDD0C9100EAEC27 /* DeviceKit in Frameworks */,
 			);
@@ -124,6 +128,8 @@
 				AA476B2A2CB5A8FF00385D85 /* MARS */,
 				AA476B2D2CB5AC2C00385D85 /* MARS */,
 				AA93DCD92CDD0C9100EAEC27 /* DeviceKit */,
+				AAC0E2AB2EA62696002F113D /* DeviceKit */,
+				AAC0E2AE2EA62718002F113D /* MARS */,
 			);
 			productName = "ARL Navigation";
 			productReference = AAC685162CA6E8C500AEEC4B /* MARS Demo.app */;
@@ -208,8 +214,8 @@
 			mainGroup = AAC6850D2CA6E8C500AEEC4B;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				AA93DCD82CDD0C5D00EAEC27 /* XCLocalSwiftPackageReference "../../../../../Documents/DeviceKit" */,
-				AA8018B42D708A1900FEF60A /* XCLocalSwiftPackageReference "../../MARS/MARS" */,
+				AAC0E2AA2EA62696002F113D /* XCRemoteSwiftPackageReference "DeviceKit" */,
+				AAC0E2AD2EA62718002F113D /* XCRemoteSwiftPackageReference "MARS-Lib" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = AAC685172CA6E8C500AEEC4B /* Products */;
@@ -417,7 +423,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = D8V8DB2CZM;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -448,7 +454,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = D8V8DB2CZM;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -585,16 +591,24 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCLocalSwiftPackageReference section */
-		AA8018B42D708A1900FEF60A /* XCLocalSwiftPackageReference "../../MARS/MARS" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = ../../MARS/MARS;
+/* Begin XCRemoteSwiftPackageReference section */
+		AAC0E2AA2EA62696002F113D /* XCRemoteSwiftPackageReference "DeviceKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devicekit/DeviceKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.0;
+			};
 		};
-		AA93DCD82CDD0C5D00EAEC27 /* XCLocalSwiftPackageReference "../../../../../Documents/DeviceKit" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = ../../../../../Documents/DeviceKit;
+		AAC0E2AD2EA62718002F113D /* XCRemoteSwiftPackageReference "MARS-Lib" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/DanilLugli/MARS-Lib.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
 		};
-/* End XCLocalSwiftPackageReference section */
+/* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
 		AA476B2A2CB5A8FF00385D85 /* MARS */ = {
@@ -608,6 +622,16 @@
 		AA93DCD92CDD0C9100EAEC27 /* DeviceKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = DeviceKit;
+		};
+		AAC0E2AB2EA62696002F113D /* DeviceKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AAC0E2AA2EA62696002F113D /* XCRemoteSwiftPackageReference "DeviceKit" */;
+			productName = DeviceKit;
+		};
+		AAC0E2AE2EA62718002F113D /* MARS */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AAC0E2AD2EA62718002F113D /* XCRemoteSwiftPackageReference "MARS-Lib" */;
+			productName = MARS;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
